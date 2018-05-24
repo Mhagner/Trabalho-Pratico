@@ -4,6 +4,7 @@ import ListContacts from './components/contacts/ListContacts';
 import CreateContact from './components/contacts/CreateContact';
 import * as ContactsAPI from './apis/ContactsAPI';
 import './App.css';
+import './bootstrap.min.css';
 
 class App extends Component {
   state = {
@@ -34,7 +35,7 @@ class App extends Component {
   
   render() {
     return (
-      <div>
+      <div className="container">
         <Route exact path='/' render={() => (
           <ListContacts
             onDeleteContact={this.removeContact}

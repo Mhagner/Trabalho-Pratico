@@ -38,24 +38,24 @@ class ListContacts extends Component {
 
     return (
       <div className=''>
-      <div className="panel panel-default">
-  <div className="panel-heading">Pesquisar</div>
-  <div className="panel-body">
+        <div className="panel panel-default">
+          <div className="panel-heading">Pesquisar</div>
+          <div className="panel-body">
 
             <div className="form-group">
               <label htmlFor="">Nome: </label>
               <input
-                      className='form-control'
-                      type='text'
-                      placeholder='Pesquisar Contatos'
-                      value={query}
-                      onChange={(event) => this.updateQuery(event.target.value)}
-                    />
+                className='form-control'
+                type='text'
+                placeholder='Pesquisar Contatos'
+                value={query}
+                onChange={(event) => this.updateQuery(event.target.value)}
+              />
             </div>
-            
-            
+
+
           </div>
-</div>
+        </div>
         {showingContacts.length !== contacts.length && (
           <div className='showing-contacts'>
             <span>Em exibição {showingContacts.length} of {contacts.length} total</span>
@@ -64,41 +64,40 @@ class ListContacts extends Component {
         )}
         <div className="well well-lg add-contact">
           <Link
-              to='/create'
-              className='btn btn-primary'
-            >Adicionar contatos</Link>
+            to='/create'
+            className='btn btn-primary'
+          >Adicionar contatos</Link>
         </div>
-          
+
         <table className="table table-bordered">
-        <thead> 
-                <tr> 
-                  <th>Foto</th> 
-                  <th>E-Mail</th> 
-                  <th>Nome</th> 
-                  <th>Ação</th> 
-                </tr> 
-                </thead>
-          {showingContacts.map((contact) => (
-           
-            <tbody>
-            <tr key={contact.id} >
-              <td>
-                <img src={contact.avatarURL}/>
-              </td>
-              <td className='contact-details'>
-                {contact.email}
-              </td>
-              <td>
-                {contact.name}
-              </td>
-              <td>
-                <button onClick={() => onDeleteContact(contact)} className='btn btn-default btn-sm'>
-                  Remover
-                </button>
-              </td>
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <th>E-Mail</th>
+              <th>Nome</th>
+              <th>Ação</th>
             </tr>
-            </tbody>
-          ))}
+          </thead>
+          <tbody>
+            {showingContacts.map((contact, index) => (
+              <tr key={index} >
+                <td>
+                  <img src={contact.avatarURL} />
+                </td>
+                <td className='contact-details'>
+                  {contact.email}
+                </td>
+                <td>
+                  {contact.name}
+                </td>
+                <td>
+                  <button onClick={() => onDeleteContact(contact)} className='btn btn-default btn-sm'>
+                    Remover
+                </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     )

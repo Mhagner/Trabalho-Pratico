@@ -35,3 +35,12 @@ img{
 .add-contact{
   text-align: right;
 }
+
+.btn{
+  margin-right: 15px
+}
+
+.avatar input{
+  opacity: 1  !important;
+  position: relative !important;
+}

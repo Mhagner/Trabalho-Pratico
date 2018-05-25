@@ -38,12 +38,12 @@ class ListContacts extends Component {
 
     return (
       <div className=''>
-      <div class="panel panel-default">
-  <div class="panel-heading">Pesquisar</div>
-  <div class="panel-body">
+      <div className="panel panel-default">
+  <div className="panel-heading">Pesquisar</div>
+  <div className="panel-body">
 
-            <div class="form-group">
-              <label for="">Nome: </label>
+            <div className="form-group">
+              <label htmlFor="">Nome: </label>
               <input
                       className='form-control'
                       type='text'
@@ -62,14 +62,14 @@ class ListContacts extends Component {
             <button className="btn btn-default btn-sm" onClick={this.clearQuery}>Mostrar Todos</button>
           </div>
         )}
-        <div class="well well-lg add-contact">
+        <div className="well well-lg add-contact">
           <Link
               to='/create'
               className='btn btn-primary'
             >Adicionar contatos</Link>
         </div>
           
-        <table class="table table-bordered">
+        <table className="table table-bordered">
         <thead> 
                 <tr> 
                   <th>Foto</th> 

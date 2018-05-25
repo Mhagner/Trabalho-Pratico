@@ -14,25 +14,28 @@ class CreateContact extends Component {
   render() {
     return (
       <div className="panel panel-default">
-        <div class="panel-heading">Create Contact</div>
-        <div class="panel-body">
-        <Link className='close-create-contact' to='/'>Fechar</Link>
-        <form onSubmit={this.handleSubmit} className='create-contact-form'>
-          <ImageInput
-            className='create-contact-avatar-input'
-            name='avatarURL'
-            maxHeight={64}
-          />
+        <div className="panel-heading">Create Contact</div>
+        <div className="panel-body">
+        
+        <form onSubmit={this.handleSubmit} className=''>
+          <div className="well well-lg add-contact">
+            <ImageInput
+              className='avatar'
+              name='avatarURL'
+              maxHeight={64}
+            />
+          </div>
           <div className='form-group'>
-            <label for="Nome">Nome</label>
+            <label htmlFor="Nome">Nome</label>
             <input type='text' name='name' placeholder='Nome' className="form-control"/>
           </div>
           <div className='form-group'>
-            <label for="email">E-mail</label>
+            <label htmlFor="email">E-mail</label>
             <input type='text' name='email' placeholder='E-mail'  className="form-control"/>
            
           </div>
-          <button className="btn btn-default">Adicionar Contato</button>
+          <button className="btn btn-primary">Adicionar Contato</button>
+          <Link className='btn btn-default' to='/'>Voltar</Link>
         </form>
         </div>
       </div>

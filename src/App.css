@@ -26,3 +26,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+img{
+  width: 50px;
+}
+
+.add-contact{
+  text-align: right;
+}
